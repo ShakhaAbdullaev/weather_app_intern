@@ -1,0 +1,45 @@
+.regions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.regions_title{
+    font-size: 25px;
+    font-weight: 600;
+    color: #374599;
+}
+
+.region_button{
+    padding: 4px;
+}
+
+.region_button {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    color: #374599;
+    font-size: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.region_button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.region_button:hover:before {
+    width: 100%;
+}
