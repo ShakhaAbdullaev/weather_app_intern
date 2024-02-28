@@ -60,6 +60,24 @@ function weatherData(json) {
     city.innerHTML = json.name;  
 }
 
+function getHourlyImage(weatherMain) {
+    switch (weatherMain) {
+        case 'Clear':
+            return 'assets/clear.png';
+        case 'Rain':
+            return 'assets/rain.png';
+        case 'Snow':
+            return 'assets/snow.png';
+        case 'Clouds':
+            return 'assets/cloud.png';
+        case 'Mist':
+        case 'Haze':
+            return 'assets/mist.png';
+        default:
+            return 'assets/clear.png';
+    }
+}
+
 function showHourlyForecast(selectedRegion) {
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${selectedRegion}&units=metric&appid=${APIKey}`)
         .then((res) => res.json())
@@ -87,9 +105,6 @@ function showHourlyForecast(selectedRegion) {
         });
 }
 
-
-
-
 function updateHourlyForecast(hourlyData) {
     const hourlyForecastElement = document.querySelector('.hourly-forecast');
 
@@ -109,23 +124,6 @@ function updateHourlyForecast(hourlyData) {
     });
 }
 
-function getHourlyImage(weatherMain) {
-    switch (weatherMain) {
-        case 'Clear':
-            return 'assets/clear.png';
-        case 'Rain':
-            return 'assets/rain.png';
-        case 'Snow':
-            return 'assets/snow.png';
-        case 'Clouds':
-            return 'assets/cloud.png';
-        case 'Mist':
-        case 'Haze':
-            return 'assets/mist.png';
-        default:
-            return 'assets/clear.png';
-    }
-}
 
 function showDailyForecast(selectedRegion) {
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${selectedRegion}&units=metric&appid=${APIKey}`)
