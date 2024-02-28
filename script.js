@@ -67,7 +67,7 @@ function showHourlyForecast(selectedRegion) {
 
             const currentWeather = {
                 time: 'Now',
-                temp: parseInt(json.list[1].main.temp),
+                temp: Math.round(json.list[1].main.temp_max),
                 imageSrc: getHourlyImage(json.list[0].weather[0].main)
             };
 
@@ -75,7 +75,7 @@ function showHourlyForecast(selectedRegion) {
             const currentHour = currentTime.getHours();
 
             const hourlyData = json.list.slice(0, 8).map((item, index) => {
-                const nextHour = (currentHour + index) % 24;
+                const nextHour = (currentHour + index * 3) % 24;
                 return {
                     time: index === 0 ? 'Now' : `${nextHour}:00`,
                     temp: Math.round(item.main.temp),
@@ -86,6 +86,8 @@ function showHourlyForecast(selectedRegion) {
             updateHourlyForecast(hourlyData, currentWeather);
         });
 }
+
+
 
 
 function updateHourlyForecast(hourlyData) {
