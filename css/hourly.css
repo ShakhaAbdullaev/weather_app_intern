@@ -6,20 +6,30 @@
 
 .hourly-image{
     width: 40px;
-    height: 40px
+    height: 40px;
 }
 
-.hourly-forecast{
-    display: flex;
-    justify-content: space-evenly;
+.hourly-forecast {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 10px;
     font-size: 20px;
     font-weight: 600;
     color: #374599;
     text-align: center;
+    gap: 10px;
+    align-items: center;
+    width: 400px;
 }
 
-.hourly-item{
+.hourly-item {
     background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
     border-radius: 10px;
+    display: flex;
+    max-width: 200px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    /* width: 100%; */
 }

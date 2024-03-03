@@ -1,6 +1,6 @@
 .daily-image{
     width: 30px;
-    height: 30px
+    height: 30px;
 }
 
 .daily-item{
@@ -8,24 +8,23 @@
     background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
     border-radius: 20px;
-    width: 30%;
     font-weight: 600;
     color: #374599;
     justify-content: space-evenly;
-    
+    width: 300px;
 }
 
 
 .daily-forecast{
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 10px;
-    align-items: center;
 }
 
 .daily{
     background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
     border-radius: 20px;
+    
 }

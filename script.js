@@ -29,31 +29,31 @@ function weatherData(json) {
 
     switch (json.weather[0].main) {
         case 'Clear':
-            image.src = 'assets/clear.png';
+            image.src = 'assets/clear.svg';
             break;
 
         case 'Rain':
-            image.src = 'assets/rain.png';
+            image.src = 'assets/rain.svg';
             break;
 
         case 'Snow':
-            image.src = 'assets/snow.png';
+            image.src = 'assets/snow.svg';
             break;
 
         case 'Clouds':
-            image.src = 'assets/cloud.png';
+            image.src = 'assets/cloud.svg';
             break;
 
         case 'Mist':
-            image.src = 'assets/mist.png';
+            image.src = 'assets/mist.svg';
             break;
 
         case 'Haze':
-            image.src = 'assets/mist.png';
+            image.src = 'assets/mist.svg';
             break;
 
         default:
-            image.src = 'assets/clear.png';
+            image.src = 'assets/clear.svg';
     }
 
     temp.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
@@ -63,18 +63,18 @@ function weatherData(json) {
 function getHourlyImage(weatherMain) {
     switch (weatherMain) {
         case 'Clear':
-            return 'assets/clear.png';
+            return 'assets/clear.svg';
         case 'Rain':
-            return 'assets/rain.png';
+            return 'assets/rain.svg';
         case 'Snow':
-            return 'assets/snow.png';
+            return 'assets/snow.svg';
         case 'Clouds':
-            return 'assets/cloud.png';
+            return 'assets/cloud.svg';
         case 'Mist':
         case 'Haze':
-            return 'assets/mist.png';
+            return 'assets/mist.svg';
         default:
-            return 'assets/clear.png';
+            return 'assets/clear.svg';
     }
 }
 
@@ -85,7 +85,7 @@ function showHourlyForecast(selectedRegion) {
 
             const currentWeather = {
                 time: 'Now',
-                temp: parseInt(json.list[1].main.temp_max),
+                temp: parseInt(json.list[1].main.temp),
                 imageSrc: getHourlyImage(json.list[0].weather[0].main)
             };
 
