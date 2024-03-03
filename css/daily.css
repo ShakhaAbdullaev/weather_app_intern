@@ -6,12 +6,13 @@
 .daily-item{
     display: flex;
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 10px;
+    padding: 8px;
     border-radius: 20px;
     font-weight: 600;
     color: #374599;
     justify-content: space-evenly;
     width: 300px;
+    align-items: center;
 }
 
 

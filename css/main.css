@@ -27,22 +27,23 @@ body{
     background-color: #FF3CAC;
     background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
     background-size: cover;
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 main{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 15px;
 }
 
 .box{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 40px;
 }
 
 .h-d-info{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 
