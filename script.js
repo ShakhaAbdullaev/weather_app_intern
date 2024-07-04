@@ -21,7 +21,7 @@ updateDateTime();
 setInterval(updateDateTime, 60000);
 
 let regionBtns = document.querySelectorAll('.region_button');
-const APIKey = '8ec79fe2bd5ce56a87cda49443e49746';
+const APIKey = 'fb76a7eb4c37afebd2acce3ff60ddea3';
 
 function weatherData(json) {
     const image = document.querySelector('.current_info-pic img');
